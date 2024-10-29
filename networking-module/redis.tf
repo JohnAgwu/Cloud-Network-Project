@@ -10,7 +10,7 @@ resource "aws_security_group" "redis_sg" {
     from_port        = 6379
     to_port          = 6379
     protocol         = "tcp"
-    security_groups  = [aws_security_group.backend_sg.id]  # Allow only backend SG
+    security_groups  = [aws_security_group.backend_sg.id] 
   }
 
   egress {
@@ -27,7 +27,7 @@ resource "aws_security_group" "redis_sg" {
 
 # Redis Instance in Private Subnet
 resource "aws_instance" "redis" {
-  ami             = "ami-0b4c7755cdf0d9219"  # Replace with an appropriate Redis-compatible AMI
+  ami             = "ami-0b4c7755cdf0d9219" 
   instance_type   = "t2.micro"
   subnet_id       = aws_subnet.private_subnet_1.id
   security_groups = [aws_security_group.redis_sg.id]

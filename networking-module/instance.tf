@@ -1,5 +1,5 @@
 resource "aws_instance" "frontend_1" {
-  ami                         = "ami-0b4c7755cdf0d9219" # Update to the correct AMI
+  ami                         = "ami-0b4c7755cdf0d9219"
   instance_type               = "t2.micro"
   vpc_security_group_ids      = [aws_security_group.frontend_sg.id]
   subnet_id                   = aws_subnet.public_subnet_1.id
@@ -14,7 +14,7 @@ resource "aws_instance" "frontend_1" {
 }
 
 resource "aws_instance" "frontend_2" {
-  ami                         = "ami-0b4c7755cdf0d9219" # Update to the correct AMI
+  ami                         = "ami-0b4c7755cdf0d9219"
   instance_type               = "t2.micro"
   vpc_security_group_ids      = [aws_security_group.frontend_sg.id]
   subnet_id                   = aws_subnet.public_subnet_2.id
@@ -29,7 +29,7 @@ resource "aws_instance" "frontend_2" {
 }
 
 resource "aws_instance" "backend_1" {
-  ami                         = "ami-0b4c7755cdf0d9219" # Update to the correct AMI
+  ami                         = "ami-0b4c7755cdf0d9219"
   instance_type               = "t2.micro"
   vpc_security_group_ids      = [aws_security_group.backend_sg.id]
   subnet_id                   = aws_subnet.private_subnet_1.id
@@ -44,7 +44,7 @@ resource "aws_instance" "backend_1" {
 }
 
 resource "aws_instance" "backend_2" {
-  ami                         = "ami-0b4c7755cdf0d9219" # Update to the correct AMI
+  ami                         = "ami-0b4c7755cdf0d9219"
   instance_type               = "t2.micro"
   vpc_security_group_ids      = [aws_security_group.backend_sg.id]
   subnet_id                   = aws_subnet.private_subnet_2.id
